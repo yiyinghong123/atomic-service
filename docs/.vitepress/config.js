@@ -1,38 +1,25 @@
 export default {
   title: '原子化服务',
-  base: '/as-doc/',
+  base: '/atomic-serivce/',
   themeConfig: {
     siteTitle: '原子化服务',
     // logo: '/images/logo.png',
 
     nav: [
       { text: '快速开始', link: '/quickstart/introduction' },
-      { text: 'API', link: '/api/' },
       {
-        text: 'SDK',
+        text: '教程',
         items: [
-          {
-            text: 'Web 运行时',
-            items: [
-              { text: 'Javascript', link: '/sdk/javascript/' },
-              { text: 'Vue', link: '/sdk/vue/' },
-              { text: 'React', link: '/sdk/react/' }
-            ]
-          },
-          {
-            text: '移动运行时',
-            items: [
-              { text: 'Android', link: '/sdk/android/' },
-              { text: 'iOS', link: '/sdk/ios/' },
-              { text: '小程序', link: '/sdk/mp/' }
-            ]
-          },
+          { text: '前端', link: '/tutorials/frontend/' },
+          { text: '后端', link: '/tutorials/backend/' },
         ]
       },
+      { text: 'UI 组件', link: '/component/' },
+      { text: 'API', link: '/api/' },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/lancemao/as-doc' }
+      { icon: 'github', link: 'https://github.com/lancemao/atomic-service' }
     ],
 
     sidebar: {
@@ -40,11 +27,39 @@ export default {
         {
           items: [
             { text: '介绍', link: '/quickstart/introduction' },
-            { text: '创建原子化服务', link: '/quickstart/set-rules-and-actions' },
-            { text: '上架原子化服务', link: '/quickstart/data-analyze' },
-            { text: '为最终用户提供运行时', link: '/quickstart/data-analyze' },
+            { text: '准备工作', link: '/quickstart/preparation' },
+            { text: '开发', collapsible: true, items: [
+                { text: '前端', link: '/quickstart/develop/frontend' },
+                { text: '后端', link: '/quickstart/develop/backend' },
+              ] 
+            },
+            { text: '发布', link: '/quickstart/publish-as' },
           ]
         }
+      ],
+
+      '/component/': [
+        {
+          text: 'General',
+          collapsible: true,
+          items: [
+            {
+              text: 'Element', link: '/component/element'
+            },
+            {
+              text: 'Text', link: '/component/text'
+            },
+            {
+              text: 'Button', link: '/component/button'
+            },
+            {
+              text: 'Input', link: '/component/input'
+            },
+            {
+              text: 'Image', link: '/component/image'
+            }
+          ]
+        },
       ],
 
       '/api/': [
@@ -111,54 +126,18 @@ export default {
         }
       ],
 
-      '/sdk/java/': [
+      '/tutorials/frontend/': [
         {
-          text: '设备管理',
-          collapsible: true,
           items: [
-            { text: '设备注册', link: '/sdk/java/register' },
-            { text: '设备认证', link: '/sdk/java/auth' },
-            { text: '设备注销', link: '/sdk/java/logout' },
-            { text: '设备删除', link: '/sdk/java/delete' },
+            { text: '初始化', link: '/tutorials/frontend/init' },
           ]
         }
       ],
 
-      '/sdk/go/': [
+      '/tutorials/backend/': [
         {
-          text: '设备管理',
-          collapsible: true,
           items: [
-            { text: '设备注册', link: '/sdk/go/register' },
-            { text: '设备认证', link: '/sdk/go/auth' },
-            { text: '设备注销', link: '/sdk/go/logout' },
-            { text: '设备删除', link: '/sdk/go/delete' },
-          ]
-        }
-      ],
-
-      '/sdk/node/': [
-        {
-          text: '设备管理',
-          collapsible: true,
-          items: [
-            { text: '设备注册', link: '/sdk/node/register' },
-            { text: '设备认证', link: '/sdk/node/auth' },
-            { text: '设备注销', link: '/sdk/node/logout' },
-            { text: '设备删除', link: '/sdk/node/delete' },
-          ]
-        }
-      ],
-
-      '/sdk/python/': [
-        {
-          text: '设备管理',
-          collapsible: true,
-          items: [
-            { text: '设备注册', link: '/sdk/python/register' },
-            { text: '设备认证', link: '/sdk/python/auth' },
-            { text: '设备注销', link: '/sdk/python/logout' },
-            { text: '设备删除', link: '/sdk/python/delete' },
+            { text: '初始化', link: '/tutorials/backend/init' },
           ]
         }
       ],

@@ -1,6 +1,6 @@
 export default {
   title: '原子化服务',
-  base: '/atomic-serivce/',
+  base: '/atomic-service/',
   themeConfig: {
     siteTitle: '原子化服务',
     // logo: '/images/logo.png',
